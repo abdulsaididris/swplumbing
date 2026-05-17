@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
@@ -138,7 +138,7 @@
           <img src="assets/logo-yeg.svg" alt="YEG Heating and Cooling" class="logo-img" style="height:54px;width:auto;" />
         </a>
       </div>
-      <button class="mobile-menu-btn" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">&#9776;</button>
+      <button class="mobile-menu-btn" >&#9776;</button>
       <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="locations.html">Locations</a>
@@ -391,22 +391,27 @@
       <div class="dispatch-form">
         <h3 style="margin-bottom:20px;color:#0A2540;">Service Request</h3>
         <form id="dispatch-form">
+          <input type="hidden" name="access_key" value="f38cfff9-f347-4b54-91e9-0158d4145a04">
+          <input type="hidden" name="subject" value="New Dispatch Request - SW Edmonton Plumbing">
+          <input type="hidden" name="from_name" value="SW Edmonton Plumbing Website">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          
           <div class="form-group">
             <label>Full Name</label>
-            <input type="text" class="form-control" required />
+            <input type="text" name="name" class="form-control" required />
           </div>
           <div class="form-group">
             <label>Phone Number</label>
-            <input type="tel" class="form-control" required />
+            <input type="tel" name="phone" class="form-control" required />
           </div>
           <div class="form-group">
             <label>Service Address</label>
-            <input type="text" class="form-control" placeholder="Street, Edmonton, AB" required />
+            <input type="text" name="address" class="form-control" placeholder="Street, Edmonton, AB" required />
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
             <div class="form-group">
               <label>Trade Required</label>
-              <select class="form-control">
+              <select name="trade" class="form-control">
                 <option>Plumbing</option>
                 <option>Heating &amp; Cooling</option>
                 <option>Both / Unsure</option>
@@ -414,7 +419,7 @@
             </div>
             <div class="form-group">
               <label>Urgency</label>
-              <select class="form-control">
+              <select name="urgency" class="form-control">
                 <option>Standard</option>
                 <option>Urgent / Same-Day</option>
                 <option>Emergency</option>
@@ -423,7 +428,7 @@
           </div>
           <div class="form-group">
             <label>Describe the Issue</label>
-            <textarea class="form-control" rows="3" required></textarea>
+            <textarea name="message" class="form-control" rows="3" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;font-size:1rem;">Submit Request</button>
           <p id="form-status" style="text-align:center;margin-top:12px;color:#0066CC;font-weight:600;"></p>
@@ -485,18 +490,10 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const form = document.getElementById('dispatch-form');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.getElementById('form-status').textContent = 'âœ… Request received! Our dispatcher will contact you shortly.';
-        form.reset();
-      });
-    }
-  </script>
+  
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
