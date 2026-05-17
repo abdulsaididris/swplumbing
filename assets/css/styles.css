@@ -343,6 +343,35 @@ html { scroll-behavior: smooth; }
   .dispatch-form {
     padding: 24px;
   }
+  /* Fix header logos on mobile */
+  .dual-logos {
+    gap: 10px !important;
+  }
+  .dual-logos .logo-img {
+    height: 36px !important;
+  }
+  .logo-divider {
+    height: 30px !important;
+  }
+  .main-nav {
+    padding: 10px 0;
+  }
+  .top-bar .container {
+    justify-content: center;
+    text-align: center;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* ── Tablet & Mobile: < 900px ── */
@@ -357,6 +386,11 @@ html { scroll-behavior: smooth; }
 
   /* Featured services — 2 big cards stack */
   #services div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Two Brands section stacks */
+  .two-brands-grid {
     grid-template-columns: 1fr !important;
   }
 
