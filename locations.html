@@ -1,151 +1,147 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Service area for SW Edmonton Plumbing and YEG Heating and Cooling — Edmonton, Sherwood Park, St. Albert, and communities across Alberta’s Capital Region." />
-  <title>Locations served | SW Edmonton Plumbing &amp; YEG Heating and Cooling</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Service area for SW Edmonton Plumbing and YEG Heating and Cooling." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>Service Areas | SW Edmonton Plumbing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="48" y2="48">
-                <stop offset="0%" stop-color="#00d4ff"/>
-                <stop offset="100%" stop-color="#7c3aed"/>
-              </linearGradient>
-            </defs>
-            <path d="M24 4c-4 8-12 14-12 24a12 12 0 1024 0c0-10-8-16-12-24z" stroke="url(#g1)" stroke-width="2" fill="rgba(0,212,255,.12)"/>
-            <path d="M28 18l4 12h-8l4-12z" fill="#f97316" opacity=".9"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <span class="brand-line">SW Edmonton Plumbing</span>
-          <span class="brand-sub">+ YEG Heating &amp; Cooling</span>
-        </span>
+  
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div>Servicing Edmonton & The Capital Region</div>
+      <div>24/7 Emergency Dispatch: <a href="tel:+17804793285">(780) 479-3285</a></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container main-nav">
+      <a href="index.html" class="logo-container">
+        <img src="assets/logo.svg" alt="SW Edmonton Plumbing" class="logo-img" />
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html#sw-focus">SW &amp; Southside</a>
+      <button class="mobile-menu-btn">â˜°</button>
+      <nav class="nav-links">
         <a href="index.html#services">Services</a>
         <a href="locations.html">Locations</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="index.html#dispatch" class="btn btn-sm btn-primary">Dispatch Tech</a>
+        <a href="blog/index.html">Insights</a>
+        <a href="index.html#dispatch" class="btn btn-primary">Request Service</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div id="mobile-nav" class="mobile-nav" hidden>
-      <a href="index.html#sw-focus">SW &amp; Southside</a>
-      <a href="index.html#services">Services</a>
-      <a href="locations.html">Locations</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="index.html#dispatch">Dispatch Tech</a>
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="wrap">
-        <p class="eyebrow">Capital Region coverage</p>
-        <h1>Locations we serve</h1>
-        <p class="lead">Edmonton is our hub. We dispatch certified plumbing and HVAC technicians across the extended metro and surrounding towns. <strong>Target 1-hour ETA</strong> applies after dispatch confirmation, subject to conditions on the ground.</p>
-      </div>
-    </section>
+  <div class="location-page-header">
+    <div class="container">
+      <h1>Service Areas & Dispatch Regions</h1>
+      <p class="lead">SW Edmonton Plumbing is headquartered in Edmonton, but our service fleet extends across the entire Capital Region. Select your community below to learn more about our specific commercial and residential services in your area.</p>
+    </div>
+  </div>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="glass-card callout-pricing">
-          <h2>Call-out rate outside Edmonton proximity</h2>
-          <p>For properties located <strong>more than approximately 15 minutes’ drive</strong> from Edmonton (as determined by dispatch routing at time of booking), a <strong>$150.00 call-out fee</strong> applies in addition to quoted work. This fee covers mobilization and initial on-site assessment; we disclose it before we roll.</p>
+  <section class="section">
+    <div class="container">
+      <div style="background: #fff; padding: 30px; border: 1px solid var(--border); border-left: 4px solid var(--accent); margin-bottom: 50px;">
+        <h3 style="color: var(--primary); margin-bottom: 10px;">Regional Call-Out Notice</h3>
+        <p style="color: var(--text-muted); margin: 0;">For properties located beyond a standard 15-minute response radius from our Edmonton core, a <strong>$150.00 call-out mobilization fee</strong> applies prior to quoted mechanical work.</p>
+      </div>
+
+      <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 15px;">Communities & Localities</h2>
+      
+      <ul class="location-list">
+        <li><a href="locations/acheson.html">Acheson</a></li>
+        <li><a href="locations/ardrossan.html">Ardrossan</a></li>
+        <li><a href="locations/athabasca.html">Athabasca</a></li>
+        <li><a href="locations/barrhead.html">Barrhead</a></li>
+        <li><a href="locations/beaumont.html">Beaumont</a></li>
+        <li><a href="locations/bon-accord.html">Bon Accord</a></li>
+        <li><a href="locations/bruderheim.html">Bruderheim</a></li>
+        <li><a href="locations/calmar.html">Calmar</a></li>
+        <li><a href="locations/camrose.html">Camrose</a></li>
+        <li><a href="locations/devon.html">Devon</a></li>
+        <li><a href="locations/drayton-valley.html">Drayton Valley</a></li>
+        <li><a href="locations/edmonton.html">Edmonton</a></li>
+        <li><a href="locations/entwistle.html">Entwistle</a></li>
+        <li><a href="locations/evansburg.html">Evansburg</a></li>
+        <li><a href="locations/fort-assiniboine.html">Fort Assiniboine</a></li>
+        <li><a href="locations/fort-saskatchewan.html">Fort Saskatchewan</a></li>
+        <li><a href="locations/gibbons.html">Gibbons</a></li>
+        <li><a href="locations/josephburg.html">Josephburg</a></li>
+        <li><a href="locations/lacombe.html">Lacombe</a></li>
+        <li><a href="locations/lamont.html">Lamont</a></li>
+        <li><a href="locations/leduc.html">Leduc</a></li>
+        <li><a href="locations/legal.html">Legal</a></li>
+        <li><a href="locations/millet.html">Millet</a></li>
+        <li><a href="locations/morinville.html">Morinville</a></li>
+        <li><a href="locations/mundare.html">Mundare</a></li>
+        <li><a href="locations/new-sarepta.html">New Sarepta</a></li>
+        <li><a href="locations/nisku.html">Nisku</a></li>
+        <li><a href="locations/onoway.html">Onoway</a></li>
+        <li><a href="locations/parkland-county.html">Parkland County</a></li>
+        <li><a href="locations/pigeon-lake.html">Pigeon Lake</a></li>
+        <li><a href="locations/ponoka.html">Ponoka</a></li>
+        <li><a href="locations/red-deer.html">Red Deer</a></li>
+        <li><a href="locations/redwater.html">Redwater</a></li>
+        <li><a href="locations/rochester.html">Rochester</a></li>
+        <li><a href="locations/rocky-mountain-house.html">Rocky Mountain House</a></li>
+        <li><a href="locations/seba-beach.html">Seba Beach</a></li>
+        <li><a href="locations/sherwood-park.html">Sherwood Park</a></li>
+        <li><a href="locations/smoky-lake.html">Smoky Lake</a></li>
+        <li><a href="locations/spruce-grove.html">Spruce Grove</a></li>
+        <li><a href="locations/st.-albert.html">St. Albert</a></li>
+        <li><a href="locations/stony-plain.html">Stony Plain</a></li>
+        <li><a href="locations/strathmore.html">Strathmore</a></li>
+        <li><a href="locations/sylvan-lake.html">Sylvan Lake</a></li>
+        <li><a href="locations/thorsby.html">Thorsby</a></li>
+        <li><a href="locations/tofield.html">Tofield</a></li>
+        <li><a href="locations/vegreville.html">Vegreville</a></li>
+        <li><a href="locations/wabamun.html">Wabamun</a></li>
+        <li><a href="locations/warburg.html">Warburg</a></li>
+        <li><a href="locations/westlock.html">Westlock</a></li>
+        <li><a href="locations/wetaskiwin.html">Wetaskiwin</a></li>
+        <li><a href="locations/whitecourt.html">Whitecourt</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Corporate Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo.svg" alt="Logo" style="height: 40px; margin-bottom: 20px; filter: brightness(0) invert(1);" />
+          <p style="color: #CBD5E1; font-size: 0.95rem;">
+            SW Edmonton Plumbing & YEG Heating and Cooling.<br>
+            Commercial & Residential Mechanical Services.
+          </p>
         </div>
-
-        <h2 class="section-title spaced">Communities &amp; localities</h2>
-        <p class="section-lead">Alphabetical list — if your area is not listed, call dispatch; we often extend for project work.</p>
-
-        <ul class="locality-grid" id="locality-list">
-          <li>Acheson</li>
-          <li>Ardrossan</li>
-          <li>Athabasca</li>
-          <li>Barrhead</li>
-          <li>Beaumont</li>
-          <li>Bon Accord</li>
-          <li>Bruderheim</li>
-          <li>Calmar</li>
-          <li>Camrose</li>
-          <li>Devon</li>
-          <li>Drayton Valley</li>
-          <li>Edmonton</li>
-          <li>Entwistle</li>
-          <li>Evansburg</li>
-          <li>Fort Assiniboine</li>
-          <li>Fort Saskatchewan</li>
-          <li>Gibbons</li>
-          <li>Josephburg</li>
-          <li>Lacombe</li>
-          <li>Lamont</li>
-          <li>Leduc</li>
-          <li>Legal</li>
-          <li>Millet</li>
-          <li>Morinville</li>
-          <li>Mundare</li>
-          <li>New Sarepta</li>
-          <li>Nisku</li>
-          <li>Onoway</li>
-          <li>Parkland County</li>
-          <li>Pigeon Lake</li>
-          <li>Ponoka</li>
-          <li>Red Deer</li>
-          <li>Redwater</li>
-          <li>Rochester</li>
-          <li>Rocky Mountain House</li>
-          <li>Seba Beach</li>
-          <li>Sherwood Park</li>
-          <li>Smoky Lake</li>
-          <li>Spruce Grove</li>
-          <li>St. Albert</li>
-          <li>Stony Plain</li>
-          <li>Strathmore</li>
-          <li>Sylvan Lake</li>
-          <li>Thorsby</li>
-          <li>Tofield</li>
-          <li>Vegreville</li>
-          <li>Wabamun</li>
-          <li>Warburg</li>
-          <li>Westlock</li>
-          <li>Wetaskiwin</li>
-          <li>Whitecourt</li>
-        </ul>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="index.html#services">Commercial Plumbing</a></li>
+            <li><a href="index.html#services">Residential Plumbing</a></li>
+            <li><a href="index.html#services">HVAC Systems</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="locations.html">Service Areas</a></li>
+            <li><a href="blog/index.html">Industry Insights</a></li>
+            <li><a href="index.html#dispatch">Dispatch Portal</a></li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <strong>SW Edmonton Plumbing</strong> + <strong>YEG Heating &amp; Cooling</strong>
-        <p class="muted">swedmontonplumbing.com · yegheatingcooling.com</p>
-      </div>
-      <div>
-        <strong>Explore</strong>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
-        </ul>
+      <div class="footer-bottom">
+        &copy; <span id="y">2026</span> SW Edmonton Plumbing Group. All Rights Reserved.
       </div>
     </div>
-    <p class="copyright wrap">© <span id="y"></span> SW Edmonton Plumbing &amp; YEG Heating and Cooling.</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+

@@ -1,316 +1,502 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="SW Edmonton Plumbing & YEG Heating and Cooling — certified technicians across Edmonton, Sherwood Park, and the Capital Region. 1-hour ETA dispatch. Plumbing, HVAC, emergency repairs." />
-  <meta name="theme-color" content="#050810" />
-  <title>SW Edmonton Plumbing & YEG Heating and Cooling | Edmonton & Capital Region</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SW Edmonton Plumbing & YEG Heating and Cooling â€” Commercial and residential plumbing and HVAC services across Edmonton and the Capital Region." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>SW Edmonton Plumbing | Commercial & Residential Services</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="canonical" href="https://swedmontonplumbing.com/" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "name": "SW Edmonton Plumbing & YEG Heating and Cooling",
-    "url": "https://swedmontonplumbing.com/",
-    "sameAs": ["https://yegheatingcooling.com/"],
-    "areaServed": {"@type": "City", "name": "Edmonton"},
-    "description": "Plumbing and HVAC dispatch across Edmonton and the Capital Region. Target 1-hour ETA.",
-    "telephone": "+1-780-555-0100"
-  }
-  </script>
+  <style>
+    /* ==============================
+       HERO â€” fits 100% viewport height
+       ============================== */
+    .hero {
+      min-height: calc(100vh - 96px); /* subtract top-bar (~36px) + header (~60px) */
+      display: flex;
+      align-items: center;
+      background-color: var(--primary);
+      padding: 40px 0;
+    }
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-brand-panel {
+      background: linear-gradient(145deg, #0D3068, #0A2540);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .hero-brand-panel .brand-shield {
+      width: 100px;
+      height: 100px;
+      background: #FF6B00;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -1px;
+    }
+    .hero-brand-panel h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .hero-brand-panel h2 span {
+      color: #FF6B00;
+    }
+    .hero-brand-panel p {
+      color: #94A3B8;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,0,0.15);
+      border: 1px solid rgba(255,107,0,0.4);
+      color: #FF6B00;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 100px;
+    }
+    @media (max-width: 900px) {
+      .hero { min-height: auto; padding: 50px 0; }
+      .hero .container { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+      .hero-brand-panel { padding: 32px 24px; }
+    }
+
+    /* Top bar */
+    .top-bar { background: #091d35; color: #CBD5E1; padding: 8px 0; font-size: 0.85rem; }
+    .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar a { color: #FF6B00; font-weight: 600; }
+
+    /* Header */
+    .header { background: #fff; border-bottom: 1px solid #E2E8F0; position: sticky; top: 0; z-index: 999; }
+    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
+    .logo-img { height: 60px; width: auto; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: #0A2540; font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+    .nav-links a:hover { color: #0066CC; }
+    .mobile-menu-btn { display: none; background: none; border: 1px solid #E2E8F0; padding: 8px 12px; font-size: 1.3rem; cursor: pointer; border-radius: 4px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: block; }
+    }
+
+    /* Hero text */
+    .hero h1 { font-size: 2.8rem; font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 18px; }
+    .hero p.lead { color: #94A3B8; font-size: 1.1rem; margin-bottom: 28px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-stats { display: flex; gap: 24px; margin-top: 32px; flex-wrap: wrap; }
+    .hero-stat { text-align: center; }
+    .hero-stat strong { display: block; font-size: 1.6rem; font-weight: 800; color: #FF6B00; }
+    .hero-stat span { font-size: 0.8rem; color: #64748B; }
+  </style>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="index.html">
-        <!-- Optional: replace the following span with your logo file, e.g. <img class="logo-img" src="assets/images/logo.png" width="140" height="48" alt="SW Edmonton Plumbing" /> -->
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="48" y2="48">
-                <stop offset="0%" stop-color="#00d4ff"/>
-                <stop offset="100%" stop-color="#7c3aed"/>
-              </linearGradient>
-            </defs>
-            <path d="M24 4c-4 8-12 14-12 24a12 12 0 1024 0c0-10-8-16-12-24z" stroke="url(#g1)" stroke-width="2" fill="rgba(0,212,255,.12)"/>
-            <path d="M28 18l4 12h-8l4-12z" fill="#f97316" opacity=".9"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <span class="brand-line">SW Edmonton Plumbing</span>
-          <span class="brand-sub">+ YEG Heating &amp; Cooling</span>
-        </span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="#sw-focus">SW &amp; Southside</a>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>&#128205; Edmonton, Alberta &mdash; Serving SW &amp; All Edmonton</span>
+      <span>24/7 Emergency: <a href="tel:+17804793285">(780) 479-3285</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container main-nav">
+      <!-- Dual brand logos -->
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="index.html" style="display:flex;align-items:center;">
+          <img src="assets/logo.svg" alt="SW Edmonton Plumbing" class="logo-img" style="height:54px;width:auto;" />
+        </a>
+        <div style="width:1px;height:44px;background:#E2E8F0;"></div>
+        <a href="index.html" style="display:flex;align-items:center;">
+          <img src="assets/logo-yeg.svg" alt="YEG Heating and Cooling" class="logo-img" style="height:54px;width:auto;" />
+        </a>
+      </div>
+      <button class="mobile-menu-btn" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='flex'?'none':'flex'">&#9776;</button>
+      <nav class="nav-links">
         <a href="#services">Services</a>
         <a href="locations.html">Locations</a>
         <a href="blog/index.html">Blog</a>
-        <a href="#dispatch" class="btn btn-sm btn-primary">Dispatch Tech</a>
+        <a href="#dispatch" class="btn btn-primary">Request Service</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div id="mobile-nav" class="mobile-nav" hidden>
-      <a href="#sw-focus">SW &amp; Southside</a>
-      <a href="#services">Services</a>
-      <a href="locations.html">Locations</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="#dispatch">Dispatch Tech</a>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <p class="eyebrow">Capital Region · Same-day priority</p>
-        <h1>Plumbing &amp; climate systems, <span class="gradient-text">built for Edmonton’s future</span></h1>
-        <p class="lead">One coordinated team for <strong>swedmontonplumbing.com</strong> and <strong>yegheatingcooling.com</strong> — from emergency leaks to furnace tune-ups. Request a certified technician and we target a <strong>1-hour ETA</strong> across our dispatch zone.</p>
+  <!-- HERO â€” 100% viewport, CTA fully visible -->
+  <section class="hero">
+    <div class="container">
+      <!-- Left: Text + CTA -->
+      <div>
+        <p style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;color:#FF6B00;font-weight:700;margin-bottom:14px;">&#9679; South West Edmonton</p>
+        <h1>Professional Plumbing &amp; Heating.<br>All of Edmonton, Served.</h1>
+        <p class="lead">SW Edmonton Plumbing &amp; YEG Heating and Cooling â€” your certified, locally-rooted trade service. We're based in South West Edmonton and dispatch citywide with a 1-hour target ETA.</p>
         <div class="hero-actions">
-          <a href="#dispatch" class="btn btn-primary btn-lg">Request dispatch</a>
-          <a href="tel:+17805550100" class="btn btn-ghost btn-lg">Call now</a>
+          <a href="#dispatch" class="btn btn-accent" style="background:#FF6B00;color:#fff;padding:14px 32px;border-radius:4px;font-weight:700;font-size:1rem;text-decoration:none;">Request Dispatch</a>
+          <a href="tel:+17804793285" class="btn" style="background:rgba(255,255,255,0.1);color:#fff;padding:14px 32px;border-radius:4px;font-weight:700;font-size:1rem;border:1px solid rgba(255,255,255,0.3);text-decoration:none;">&#128222; (780) 479-3285</a>
         </div>
-        <ul class="hero-stats">
-          <li><span class="stat-num">1 hr</span><span class="stat-label">Target arrival window</span></li>
-          <li><span class="stat-num">2 trades</span><span class="stat-label">Plumbing + HVAC under one roof</span></li>
-          <li><span class="stat-num">$150</span><span class="stat-label">Call-out beyond 15 min of Edmonton*</span></li>
-        </ul>
-        <p class="fine-print">*See <a href="locations.html">locations</a> for service area details. ETA depends on traffic, weather, and call volume; we confirm on dispatch.</p>
-      </div>
-    </section>
-
-    <section id="sw-focus" class="section split-feature">
-      <div class="wrap">
-        <h2 class="section-title">Edmonton-wide — with a Southside edge</h2>
-        <p class="section-lead">We serve the entire city and surrounding communities. Our roots and rapid routing are strongest in <strong>Southwest Edmonton</strong> and the broader <strong>Southside</strong>: Windermere, Terwillegar, Rabbit Hill, Heritage Valley, Ellerslie, Summerside, and adjacent corridors where density and new builds demand fast, code-savvy trades.</p>
-        <div class="cards-2">
-          <article class="glass-card accent-cyan">
-            <h3>SW Edmonton Plumbing</h3>
-            <p>High-efficiency fixtures, hydronic and potable water design support, drain diagnostics, and leak response tuned for newer subdivisions and mature SW neighbourhoods alike.</p>
-            <ul class="checklist">
-              <li>Priority routing for SW postal prefixes (T6W, T6X, T6J, T6E corridors)</li>
-              <li>Stacked townhomes &amp; single-family — camera inspections available</li>
-              <li>Water softener, filtration, and pressure management</li>
-            </ul>
-          </article>
-          <article class="glass-card accent-violet">
-            <h3>YEG Heating &amp; Cooling</h3>
-            <p>Furnaces, heat pumps, AC, IAQ, and seasonal changeovers. Southside homes often mix radiant loads with forced air — we balance comfort, humidity, and efficiency.</p>
-            <ul class="checklist">
-              <li>Heat pump rebates &amp; cold-climate sizing guidance</li>
-              <li>High-velocity and conventional ducted systems</li>
-              <li>24/7 monitored dispatch line for no-heat / no-cool</li>
-            </ul>
-          </article>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>1 hr</strong><span>Target ETA</span></div>
+          <div class="hero-stat"><strong>SW Roots</strong><span>Edmonton-Based</span></div>
+          <div class="hero-stat"><strong>2 Trades</strong><span>Plumbing + HVAC</span></div>
         </div>
       </div>
-    </section>
 
-    <section id="dispatch" class="section dispatch">
-      <div class="wrap">
-        <div class="dispatch-grid">
-          <div>
-            <h2 class="section-title">Dispatch a certified technician</h2>
-            <p class="section-lead">Complete the form — our dispatcher confirms trade type, verifies your address, and assigns the next available certified tech. <strong>Target ETA: 1 hour</strong> from confirmation for standard dispatch within our primary zone.</p>
-            <ul class="dispatch-notes">
-              <li>For life safety (gas odour, major flooding), call <a href="tel:911">911</a> first, then us.</li>
-              <li>Outside ~15 minutes’ drive from Edmonton core: <strong>$150.00 call-out</strong> applies before work begins.</li>
-            </ul>
-          </div>
-          <form class="dispatch-form glass-card" id="dispatch-form" novalidate>
-            <h3 class="form-title">Service request</h3>
-            <div class="field-row">
-              <label class="field">
-                <span>Full name</span>
-                <input name="name" type="text" autocomplete="name" required />
-              </label>
-              <label class="field">
-                <span>Phone</span>
-                <input name="phone" type="tel" autocomplete="tel" required />
-              </label>
-            </div>
-            <label class="field">
-              <span>Email</span>
-              <input name="email" type="email" autocomplete="email" />
-            </label>
-            <label class="field">
-              <span>Service address</span>
-              <input name="address" type="text" autocomplete="street-address" required placeholder="Unit / street / city" />
-            </label>
-            <div class="field-row">
-              <label class="field">
-                <span>Trade</span>
-                <select name="trade" required>
-                  <option value="">Select…</option>
-                  <option value="plumbing">Plumbing</option>
-                  <option value="hvac">Heating &amp; cooling</option>
-                  <option value="both">Both / unsure</option>
-                </select>
-              </label>
-              <label class="field">
-                <span>Urgency</span>
-                <select name="urgency" required>
-                  <option value="standard">Standard (1 hr target)</option>
-                  <option value="urgent">Urgent — safety or property risk</option>
-                  <option value="schedule">Schedule later</option>
-                </select>
-              </label>
-            </div>
-            <label class="field">
-              <span>Describe the issue</span>
-              <textarea name="details" rows="4" required placeholder="What’s happening? Any error codes, sounds, or water location?"></textarea>
-            </label>
-            <label class="field consent">
-              <input name="consent" type="checkbox" required />
-              <span>I agree to be contacted about this request and understand ETA is a target, not a guarantee.</span>
-            </label>
-            <button type="submit" class="btn btn-primary btn-block">Submit dispatch request</button>
-            <p class="form-foot" id="form-status" role="status"></p>
-          </form>
+      <!-- Right: Branded panel replacing the image -->
+      <div class="hero-brand-panel">
+        <div class="brand-shield">SW</div>
+        <h2>SW Edmonton Plumbing<br>&amp; <span>Heating</span></h2>
+        <p>Serving all of Edmonton.<br>Located in South West Edmonton.<br>Licensed &bull; Insured &bull; WCB Compliant</p>
+        <div class="hero-badge">
+          <span>&#9989;</span>
+          <span>Certified Technicians</span>
         </div>
-      </div>
-    </section>
-
-    <section id="services" class="section services">
-      <div class="wrap">
-        <h2 class="section-title">Everything we offer</h2>
-        <p class="section-lead">Two licensed streams — plumbing and HVAC — coordinated so you are not bounced between unrelated contractors.</p>
-
-        <div class="service-block">
-          <h3 class="service-heading"><span class="tag tag-cyan">Plumbing</span> Residential &amp; light commercial</h3>
-          <div class="service-columns">
-            <div>
-              <h4>Emergency &amp; repairs</h4>
-              <p>Burst pipes, active leaks, failed PRVs, running toilets, backed-up fixtures, sump failures, hose bib freeze breaks, and slab-area moisture investigation with isolation testing.</p>
-            </div>
-            <div>
-              <h4>Drain &amp; sewer</h4>
-              <p>Snake and auger clearing, hydro-jetting where appropriate, mainline camera with locator, spot repair vs. line replacement guidance, backwater valve assessment, and cleanout installation planning.</p>
-            </div>
-            <div>
-              <h4>Water heaters</h4>
-              <p>Tank and tankless sizing, gas and electric connections, recirculation pumps, mixing valves, expansion tanks, anode service, flush &amp; burn maintenance, and warranty-preserving installs.</p>
-            </div>
-            <div>
-              <h4>Fixtures &amp; finishes</h4>
-              <p>Faucets, showers, tubs, garburators, dishwashers, ice lines, laundry boxes, outdoor silcocks, and accessibility-focused lever and thermostatic upgrades.</p>
-            </div>
-            <div>
-              <h4>Water quality &amp; treatment</h4>
-              <p>Softeners, iron filters, UV, RO drinking systems, pressure-reducing valves, whole-home filtration, and hardness testing for Edmonton region water chemistry.</p>
-            </div>
-            <div>
-              <h4>Renovations &amp; rough-in</h4>
-              <p>Basement bars, secondary suites (where permitted), kitchen and bath relocations, hydronic tie-ins with mechanical partners, gas line to fireplace or range (coordinated with HVAC/gas fitters as required).</p>
-            </div>
-          </div>
+        <br><br>
+        <div class="hero-badge" style="margin-top: 0;">
+          <span>&#128338;</span>
+          <span>1-Hour Target ETA</span>
         </div>
-
-        <div class="service-block">
-          <h3 class="service-heading"><span class="tag tag-violet">HVAC</span> Heating, cooling &amp; air quality</h3>
-          <div class="service-columns">
-            <div>
-              <h4>Furnaces</h4>
-              <p>High-efficiency replacement, heat exchanger inspection, ignition and flame-sensor service, blower cleaning, duct static pressure checks, and carbon monoxide safety verification.</p>
-            </div>
-            <div>
-              <h4>Air conditioning</h4>
-              <p>Central AC install and replacement, refrigerant leak search, coil cleaning, TXV and contactor service, seasonal start-up and winterization.</p>
-            </div>
-            <div>
-              <h4>Heat pumps</h4>
-              <p>Cold-climate heat pump sizing, dual-fuel with furnace backup, defrost diagnostics, line set routing for aesthetic and efficiency, and rebate documentation assistance.</p>
-            </div>
-            <div>
-              <h4>IAQ &amp; controls</h4>
-              <p>Humidifiers, HRV/ERV, media filters, UV treatment, smart thermostats, zoning discussions, and airflow balancing for hot upper floors common in newer Southside builds.</p>
-            </div>
-            <div>
-              <h4>Garage &amp; specialty</h4>
-              <p>Unit heaters, radiant coordination, make-up air for tight envelopes, and ventilation for workshops and detached garages.</p>
-            </div>
-            <div>
-              <h4>Maintenance plans</h4>
-              <p>Seasonal furnace and AC tune-ups, priority booking, discounted diagnostics, and documented service history for home resale.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cta-band">
-      <div class="wrap cta-inner">
-        <div>
-          <h2>Prefer the phone?</h2>
-          <p>Speak with dispatch — we triage plumbing vs. HVAC and send the right ticket.</p>
-        </div>
-        <a href="tel:+17805550100" class="btn btn-primary btn-lg">780-555-0100</a>
-      </div>
-    </section>
-
-    <section class="section blog-teaser">
-      <div class="wrap">
-        <h2 class="section-title">From the blog</h2>
-        <div class="blog-cards">
-          <article class="glass-card">
-            <p class="meta">May 2026 · HVAC</p>
-            <h3><a href="blog/heat-pump-edmonton-winter.html">Heat pumps in Edmonton winters: what actually works</a></h3>
-            <p>Sizing, balance point, and why your furnace still matters.</p>
-          </article>
-          <article class="glass-card">
-            <p class="meta">May 2026 · Plumbing</p>
-            <h3><a href="blog/water-pressure-sw-edmonton.html">Low pressure in SW new builds</a></h3>
-            <p>PRVs, PRV stations, and fixture restrictions we see most.</p>
-          </article>
-          <article class="glass-card">
-            <p class="meta">April 2026 · Safety</p>
-            <h3><a href="blog/carbon-monoxide-furnace.html">CO checks your furnace tech should perform</a></h3>
-            <p>A homeowner-friendly checklist aligned with best practice.</p>
-          </article>
-        </div>
-        <p class="center"><a class="btn btn-ghost" href="blog/index.html">All articles</a></p>
-      </div>
-    </section>
-
-    <section class="section domains">
-      <div class="wrap glass-card domains-inner">
-        <h2 class="section-title">One team, two front doors</h2>
-        <p>Whether you land on <strong>swedmontonplumbing.com</strong> or <strong>yegheatingcooling.com</strong>, you get the same dispatch, same standards, and the same Capital Region coverage. Point either domain to this site — visitors always reach the right help.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <strong>SW Edmonton Plumbing</strong> + <strong>YEG Heating &amp; Cooling</strong>
-        <p class="muted">Licensed trades. WCB and liability in force. Replace the 780-555-0100 placeholder with your live dispatch line before launch.</p>
-      </div>
-      <div>
-        <strong>Explore</strong>
-        <ul class="footer-links">
-          <li><a href="locations.html">Locations &amp; call-out</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
-          <li><a href="#dispatch">Dispatch</a></li>
-        </ul>
-      </div>
-      <div>
-        <strong>Domains</strong>
-        <p class="muted">swedmontonplumbing.com · yegheatingcooling.com</p>
       </div>
     </div>
-    <p class="copyright wrap">© <span id="y"></span> SW Edmonton Plumbing &amp; YEG Heating and Cooling. All rights reserved.</p>
+  </section>
+
+  <!-- FEATURED SERVICES SECTION -->
+  <section id="services" class="section" style="background:#0A2540;padding:80px 0;">
+    <div class="container">
+
+      <!-- Section heading -->
+      <div style="text-align:center;margin-bottom:60px;">
+        <p style="color:#FF6B00;font-weight:700;text-transform:uppercase;font-size:0.8rem;letter-spacing:0.15em;margin-bottom:10px;">What We Do Best</p>
+        <h2 style="color:#fff;font-size:2.5rem;margin-bottom:14px;">Featured Services</h2>
+        <p style="color:#94A3B8;max-width:600px;margin:0 auto;font-size:1.05rem;">From urgent emergencies to planned renovations, here are the services our Edmonton customers call us for most.</p>
+      </div>
+
+      <!-- TOP 2: Emergency + General Plumbing â€” HERO CARDS -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+
+        <!-- Emergency Residential -->
+        <div style="background:linear-gradient(135deg,#C0392B,#96281B);border-radius:12px;padding:44px 40px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-20px;right:-20px;font-size:8rem;opacity:0.08;line-height:1;">&#128680;</div>
+          <span style="display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:0.75rem;font-weight:700;padding:5px 12px;border-radius:100px;margin-bottom:18px;letter-spacing:0.05em;">&#128680; MOST URGENT</span>
+          <h3 style="color:#fff;font-size:1.9rem;font-weight:800;margin-bottom:14px;line-height:1.2;">Emergency Residential Plumbing</h3>
+          <p style="color:rgba(255,255,255,0.8);margin-bottom:24px;line-height:1.7;">Burst pipes, major leaks, blocked sewers, no hot water, flooding â€” we dispatch certified plumbers 24/7 with a 1-hour target ETA to your Edmonton home.</p>
+          <ul style="list-style:none;color:rgba(255,255,255,0.85);line-height:2.1;margin-bottom:28px;">
+            <li>&#9888;&#65039; &nbsp;Burst or frozen pipes</li>
+            <li>&#9888;&#65039; &nbsp;Sewer backups &amp; flooding</li>
+            <li>&#9888;&#65039; &nbsp;No hot water / water heater failure</li>
+            <li>&#9888;&#65039; &nbsp;Gas line concerns (we coordinate with gas fitters)</li>
+          </ul>
+          <a href="#dispatch" style="display:inline-block;background:#fff;color:#C0392B;padding:14px 28px;border-radius:4px;font-weight:800;font-size:1rem;text-decoration:none;">&#128222; Dispatch Now &rarr;</a>
+        </div>
+
+        <!-- General Residential Plumbing -->
+        <div style="background:linear-gradient(135deg,#0D6EFD,#0A4FBD);border-radius:12px;padding:44px 40px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-20px;right:-20px;font-size:8rem;opacity:0.08;line-height:1;">&#128295;</div>
+          <span style="display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:0.75rem;font-weight:700;padding:5px 12px;border-radius:100px;margin-bottom:18px;letter-spacing:0.05em;">&#128295; MOST POPULAR</span>
+          <h3 style="color:#fff;font-size:1.9rem;font-weight:800;margin-bottom:14px;line-height:1.2;">General Residential Plumbing</h3>
+          <p style="color:rgba(255,255,255,0.8);margin-bottom:24px;line-height:1.7;">Dripping faucets, slow drains, running toilets, leaky pipes, fixture replacements â€” we handle all general plumbing for Edmonton homes, fast and affordably.</p>
+          <ul style="list-style:none;color:rgba(255,255,255,0.85);line-height:2.1;margin-bottom:28px;">
+            <li>&#9989; &nbsp;Faucet &amp; fixture replacements</li>
+            <li>&#9989; &nbsp;Drain cleaning &amp; snaking</li>
+            <li>&#9989; &nbsp;Toilet repairs &amp; replacements</li>
+            <li>&#9989; &nbsp;Water heater installs &amp; service</li>
+          </ul>
+          <a href="#dispatch" style="display:inline-block;background:#fff;color:#0D6EFD;padding:14px 28px;border-radius:4px;font-weight:800;font-size:1rem;text-decoration:none;">Request Service &rarr;</a>
+        </div>
+      </div>
+
+      <!-- FULL SERVICE CATALOGUE â€” 4 cards -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-bottom:40px;">
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:28px 24px;">
+          <div style="font-size:2rem;margin-bottom:12px;">&#127970;</div>
+          <h4 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Commercial Plumbing</h4>
+          <p style="color:#94A3B8;font-size:0.9rem;margin-bottom:16px;">Rough-ins, tenant improvements, backflow testing, and large-scale water systems for commercial properties.</p>
+          <a href="#dispatch" style="color:#FF6B00;font-weight:600;font-size:0.9rem;text-decoration:none;">Request Quote &rarr;</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:28px 24px;">
+          <div style="font-size:2rem;margin-bottom:12px;">&#10052;</div>
+          <h4 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Heating &amp; Cooling</h4>
+          <p style="color:#94A3B8;font-size:0.9rem;margin-bottom:16px;">Furnace installs &amp; repairs, AC, heat pumps, HRV, and full HVAC maintenance plans for homes and businesses.</p>
+          <a href="#dispatch" style="color:#FF6B00;font-weight:600;font-size:0.9rem;text-decoration:none;">Request Service &rarr;</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:28px 24px;">
+          <div style="font-size:2rem;margin-bottom:12px;">&#129531;</div>
+          <h4 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Bathroom Renovations</h4>
+          <p style="color:#94A3B8;font-size:0.9rem;margin-bottom:16px;">Full bathroom remodels â€” plumbing rough-in, tiling, vanity, shower, fixtures, and finishing. One team, one invoice.</p>
+          <a href="#dispatch" style="color:#FF6B00;font-weight:600;font-size:0.9rem;text-decoration:none;">Get a Quote &rarr;</a>
+        </div>
+        <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:28px 24px;">
+          <div style="font-size:2rem;margin-bottom:12px;">&#128167;</div>
+          <h4 style="color:#fff;font-size:1.05rem;margin-bottom:8px;">Water Treatment</h4>
+          <p style="color:#94A3B8;font-size:0.9rem;margin-bottom:16px;">Softeners, UV systems, RO drinking water, iron filters, and pressure management for Edmonton's hard water.</p>
+          <a href="#dispatch" style="color:#FF6B00;font-weight:600;font-size:0.9rem;text-decoration:none;">Learn More &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Bathroom Feature Banner -->
+      <div style="background:rgba(255,107,0,0.08);border:1px solid rgba(255,107,0,0.25);border-radius:12px;padding:40px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;">
+        <div>
+          <span style="color:#FF6B00;font-weight:700;text-transform:uppercase;font-size:0.8rem;letter-spacing:0.12em;">Highlight</span>
+          <h3 style="color:#fff;font-size:1.6rem;margin:10px 0 12px;">Full Bathroom Renovations â€” One Call Does It All</h3>
+          <p style="color:#94A3B8;margin:0;">Showers &bull; Vanities &bull; Tiling &bull; Fixtures &bull; Barrier-Free &bull; Lighting &bull; Waterproofing</p>
+        </div>
+        <div style="text-align:right;flex-shrink:0;">
+          <a href="#dispatch" style="display:inline-block;background:#FF6B00;color:#fff;padding:14px 30px;border-radius:4px;font-weight:700;font-size:1rem;text-decoration:none;white-space:nowrap;">Book Free Consult</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why SW Edmonton Plumbing?</h2>
+        <p>We're your neighbours â€” South West Edmonton is where we live and work.</p>
+      </div>
+      <div class="grid-3">
+        <div style="text-align:center;padding:30px 20px;">
+          <div style="font-size:3rem;margin-bottom:15px;">&#127974;</div>
+          <h3 style="color:#0A2540;margin-bottom:10px;">Local Expertise</h3>
+          <p style="color:#666;">We know SW Edmonton's neighbourhoods, new builds, and water systems. Faster diagnosis, better solutions.</p>
+        </div>
+        <div style="text-align:center;padding:30px 20px;">
+          <div style="font-size:3rem;margin-bottom:15px;">&#9989;</div>
+          <h3 style="color:#0A2540;margin-bottom:10px;">Fully Certified</h3>
+          <p style="color:#666;">Licensed plumbers and HVAC techs. WCB and liability insurance in force on every job.</p>
+        </div>
+        <div style="text-align:center;padding:30px 20px;">
+          <div style="font-size:3rem;margin-bottom:15px;">&#128338;</div>
+          <h3 style="color:#0A2540;margin-bottom:10px;">1-Hour Target ETA</h3>
+          <p style="color:#666;">From your call to technician arrival, we target 60 minutes for urgent dispatch within our primary zone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO BRANDS SECTION -->
+  <section class="section" style="background:#F0F4F8;padding:80px 0;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:50px;">
+        <p style="color:#FF6B00;font-weight:700;text-transform:uppercase;font-size:0.8rem;letter-spacing:0.15em;margin-bottom:10px;">Our Group of Companies</p>
+        <h2 style="color:#0A2540;font-size:2.4rem;margin-bottom:12px;">Two Brands. One Trusted Team.</h2>
+        <p style="color:#555;max-width:580px;margin:0 auto;font-size:1.05rem;">When you call either brand, you reach the same certified dispatch team, the same standards, and the same service excellence across Edmonton.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;">
+
+        <!-- SW Edmonton Plumbing Brand Card -->
+        <div style="background:#fff;border-radius:12px;border:2px solid #0A2540;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.06);">
+          <div style="background:#0A2540;padding:32px 36px;display:flex;align-items:center;gap:20px;">
+            <div style="background:#fff;border-radius:10px;padding:10px 14px;flex-shrink:0;">
+              <img src="assets/logo.svg" alt="SW Edmonton Plumbing" style="height:48px;width:auto;display:block;" />
+            </div>
+            <div>
+              <h3 style="color:#fff;font-size:1.3rem;margin:0 0 4px;">SW Edmonton Plumbing</h3>
+              <p style="color:#94A3B8;font-size:0.9rem;margin:0;">swedmontonplumbing.com</p>
+            </div>
+          </div>
+          <div style="padding:32px 36px;">
+            <p style="color:#444;margin-bottom:20px;line-height:1.7;">Your go-to for all residential and commercial plumbing needs â€” from emergency burst pipe repairs to full bathroom renovations. Based in SW Edmonton, serving the whole city.</p>
+            <ul style="list-style:none;color:#333;line-height:2.1;margin-bottom:28px;padding:0;">
+              <li>&#128295; &nbsp;Emergency &amp; general plumbing</li>
+              <li>&#128295; &nbsp;Drain cleaning &amp; sewer service</li>
+              <li>&#128295; &nbsp;Water heaters &amp; treatment</li>
+              <li>&#128295; &nbsp;Bathroom renovations</li>
+              <li>&#128295; &nbsp;Commercial rough-in &amp; fit-out</li>
+            </ul>
+            <a href="#dispatch" style="display:inline-block;background:#0A2540;color:#fff;padding:13px 26px;border-radius:4px;font-weight:700;text-decoration:none;">Book Plumbing Service &rarr;</a>
+          </div>
+        </div>
+
+        <!-- YEG Heating & Cooling Brand Card -->
+        <div style="background:#fff;border-radius:12px;border:2px solid #E65C00;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.06);">
+          <div style="background:#E65C00;padding:32px 36px;display:flex;align-items:center;gap:20px;">
+            <div style="background:#fff;border-radius:10px;padding:10px 14px;flex-shrink:0;">
+              <img src="assets/logo-yeg.svg" alt="YEG Heating and Cooling" style="height:48px;width:auto;display:block;" />
+            </div>
+            <div>
+              <h3 style="color:#fff;font-size:1.3rem;margin:0 0 4px;">YEG Heating &amp; Cooling</h3>
+              <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;margin:0;">yegheatingcooling.com</p>
+            </div>
+          </div>
+          <div style="padding:32px 36px;">
+            <p style="color:#444;margin-bottom:20px;line-height:1.7;">Edmonton's HVAC specialists for residential and commercial climate control â€” from furnace repairs in January to AC tune-ups before summer, we keep your home comfortable year-round.</p>
+            <ul style="list-style:none;color:#333;line-height:2.1;margin-bottom:28px;padding:0;">
+              <li>&#128293; &nbsp;Furnace installs, repairs &amp; tune-ups</li>
+              <li>&#128293; &nbsp;Air conditioning &amp; central AC</li>
+              <li>&#128293; &nbsp;Heat pumps &amp; cold-climate systems</li>
+              <li>&#128293; &nbsp;HRV / ERV &amp; indoor air quality</li>
+              <li>&#128293; &nbsp;24/7 no-heat emergency dispatch</li>
+            </ul>
+            <a href="#dispatch" style="display:inline-block;background:#E65C00;color:#fff;padding:13px 26px;border-radius:4px;font-weight:700;text-decoration:none;">Book HVAC Service &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Unifying banner -->
+      <div style="margin-top:30px;background:#0A2540;border-radius:10px;padding:30px 40px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+          <img src="assets/logo.svg" alt="SW Edmonton Plumbing" style="height:38px;filter:brightness(0) invert(1);" />
+          <span style="color:rgba(255,255,255,0.3);font-size:1.5rem;">+</span>
+          <img src="assets/logo-yeg.svg" alt="YEG Heating &amp; Cooling" style="height:38px;filter:brightness(0) invert(1);" />
+        </div>
+        <p style="color:#CBD5E1;margin:0;font-size:0.95rem;max-width:420px;">One call connects you to both trades. Our dispatcher triages plumbing vs. HVAC and sends exactly the right technician.</p>
+        <a href="#dispatch" style="background:#FF6B00;color:#fff;padding:13px 26px;border-radius:4px;font-weight:700;text-decoration:none;white-space:nowrap;">&#128222; Call Dispatch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dispatch Section -->
+  <section id="dispatch" class="section" style="background:#F8F9FA;">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div>
+        <p style="color:#FF6B00;font-weight:700;text-transform:uppercase;font-size:0.85rem;letter-spacing:0.1em;margin-bottom:10px;">Dispatch Portal</p>
+        <h2 style="font-size:2.2rem;color:#0A2540;margin-bottom:16px;">Request a Certified Technician</h2>
+        <p style="color:#666;margin-bottom:24px;">Complete the form and our dispatch team will confirm your tech, trade type, and ETA. For life-safety emergencies (gas, flooding), call 911 first.</p>
+        <ul style="list-style:none;color:#333;line-height:2;">
+          <li>&#9989; <strong>Same-day service available</strong></li>
+          <li>&#9989; <strong>1-hour target for urgent calls</strong></li>
+          <li>&#9989; <strong>Clear pricing before work begins</strong></li>
+          <li>&#9989; <strong>Licensed &amp; insured technicians</strong></li>
+        </ul>
+      </div>
+      <div class="dispatch-form">
+        <h3 style="margin-bottom:20px;color:#0A2540;">Service Request</h3>
+        <form id="dispatch-form">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label>Service Address</label>
+            <input type="text" class="form-control" placeholder="Street, Edmonton, AB" required />
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group">
+              <label>Trade Required</label>
+              <select class="form-control">
+                <option>Plumbing</option>
+                <option>Heating &amp; Cooling</option>
+                <option>Both / Unsure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Urgency</label>
+              <select class="form-control">
+                <option>Standard</option>
+                <option>Urgent / Same-Day</option>
+                <option>Emergency</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Describe the Issue</label>
+            <textarea class="form-control" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;padding:14px;font-size:1rem;">Submit Request</button>
+          <p id="form-status" style="text-align:center;margin-top:12px;color:#0066CC;font-weight:600;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations Teaser -->
+  <section class="section section-bg">
+    <div class="container" style="text-align:center;">
+      <h2 style="color:#0A2540;margin-bottom:15px;">Serving All of Edmonton &amp; Beyond</h2>
+      <p style="color:#666;max-width:600px;margin:0 auto 30px;">We dispatch to every corner of Edmonton and to over 50 surrounding communities including Sherwood Park, Beaumont, Leduc, Spruce Grove, St. Albert, and more.</p>
+      <a href="locations.html" class="btn btn-primary" style="padding:14px 36px;">View All Service Areas</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo.svg" alt="SW Edmonton Plumbing" style="height:55px;margin-bottom:20px;filter:brightness(0) invert(1);" />
+          <p style="color:#CBD5E1;font-size:0.95rem;">
+            SW Edmonton Plumbing &amp; YEG Heating and Cooling.<br>
+            Commercial &amp; Residential Mechanical Services.<br>
+            Based in South West Edmonton.
+          </p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Commercial Plumbing</a></li>
+            <li><a href="#services">Residential Plumbing</a></li>
+            <li><a href="#services">Heating &amp; Cooling</a></li>
+            <li><a href="#dispatch">Emergency Repair</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="locations.html">Service Areas</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="#dispatch">Dispatch Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>&#128222; <a href="tel:+17804793285">(780) 479-3285</a></li>
+            <li>&#128205; South West Edmonton, AB</li>
+            <li>&#128338; 1-Hour Target ETA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="y">2026</span> SW Edmonton Plumbing Group. All Rights Reserved.
+      </div>
+    </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const form = document.getElementById('dispatch-form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('form-status').textContent = 'âœ… Request received! Our dispatcher will contact you shortly.';
+        form.reset();
+      });
+    }
+  </script>
+
 </body>
 </html>
+

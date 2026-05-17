@@ -1,132 +1,200 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-CA">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Articles on plumbing, heating, cooling, and home comfort from SW Edmonton Plumbing and YEG Heating and Cooling." />
-  <title>Blog | SW Edmonton Plumbing &amp; YEG Heating and Cooling</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plumbing and HVAC tips, guides, and industry insights from SW Edmonton Plumbing & YEG Heating and Cooling." />
+  <meta name="theme-color" content="#0A2540" />
+  <title>Blog | SW Edmonton Plumbing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <style>
+    .top-bar { background: #091d35; color: #CBD5E1; padding: 8px 0; font-size: 0.85rem; }
+    .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+    .top-bar a { color: #FF6B00; font-weight: 600; }
+    .header { background: #fff; border-bottom: 1px solid #E2E8F0; position: sticky; top: 0; z-index: 999; }
+    .main-nav { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; }
+    .logo-img { height: 60px; width: auto; }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: #0A2540; font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+    .nav-links a:hover { color: #0066CC; }
+    .mobile-menu-btn { display: none; background: none; border: 1px solid #E2E8F0; padding: 8px 12px; font-size: 1.3rem; cursor: pointer; border-radius: 4px; }
+    @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } }
+    .page-hero { background: #0A2540; color: #fff; padding: 60px 0; }
+    .page-hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 14px; }
+    .page-hero p { color: #94A3B8; font-size: 1.1rem; max-width: 600px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; margin-top: 50px; }
+    .blog-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 8px; overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+    .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-3px); }
+    .blog-card-body { padding: 28px; }
+    .blog-tag { display: inline-block; background: #EFF6FF; color: #0066CC; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 100px; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .blog-tag.hvac { background: #FFF7ED; color: #EA580C; }
+    .blog-tag.safety { background: #F0FDF4; color: #16A34A; }
+    .blog-card h2 { font-size: 1.2rem; font-weight: 700; color: #0A2540; margin-bottom: 10px; line-height: 1.4; }
+    .blog-card h2 a { color: inherit; text-decoration: none; }
+    .blog-card h2 a:hover { color: #0066CC; }
+    .blog-card p { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; }
+    .blog-card-footer { display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-top: 1px solid #F1F5F9; font-size: 0.85rem; color: #94A3B8; }
+    .read-more { color: #0066CC; font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+    .read-more:hover { color: #0A2540; }
+  </style>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="../index.html">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g1" x1="0" y1="0" x2="48" y2="48">
-                <stop offset="0%" stop-color="#00d4ff"/>
-                <stop offset="100%" stop-color="#7c3aed"/>
-              </linearGradient>
-            </defs>
-            <path d="M24 4c-4 8-12 14-12 24a12 12 0 1024 0c0-10-8-16-12-24z" stroke="url(#g1)" stroke-width="2" fill="rgba(0,212,255,.12)"/>
-            <path d="M28 18l4 12h-8l4-12z" fill="#f97316" opacity=".9"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <span class="brand-line">SW Edmonton Plumbing</span>
-          <span class="brand-sub">+ YEG Heating &amp; Cooling</span>
-        </span>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>&#128205; South West Edmonton, Alberta</span>
+      <span>24/7 Emergency: <a href="tel:+17804793285">(780) 479-3285</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container main-nav">
+      <a href="../index.html">
+        <img src="../assets/logo.svg" alt="SW Edmonton Plumbing Logo" class="logo-img" />
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="../index.html#sw-focus">SW &amp; Southside</a>
+      <button class="mobile-menu-btn">&#9776;</button>
+      <nav class="nav-links">
         <a href="../index.html#services">Services</a>
         <a href="../locations.html">Locations</a>
-        <a href="index.html">Blog</a>
-        <a href="../index.html#dispatch" class="btn btn-sm btn-primary">Dispatch Tech</a>
+        <a href="index.html" style="color:#0066CC;">Blog</a>
+        <a href="../index.html#dispatch" class="btn btn-primary" style="background:#0066CC;color:#fff;padding:10px 20px;border-radius:4px;text-decoration:none;">Request Service</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div id="mobile-nav" class="mobile-nav" hidden>
-      <a href="../index.html#sw-focus">SW &amp; Southside</a>
-      <a href="../index.html#services">Services</a>
-      <a href="../locations.html">Locations</a>
-      <a href="index.html">Blog</a>
-      <a href="../index.html#dispatch">Dispatch Tech</a>
     </div>
   </header>
 
-  <main class="page-main">
-    <section class="page-hero">
-      <div class="wrap">
-        <p class="eyebrow">Field notes &amp; homeowner guides</p>
-        <h1>Blog</h1>
-        <p class="lead">Practical guidance from the same team that answers your dispatch line — written for Edmonton’s climate, water chemistry, and housing stock.</p>
-      </div>
-    </section>
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="container">
+      <p style="color:#FF6B00;font-weight:700;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;margin-bottom:10px;">SW Edmonton Plumbing</p>
+      <h1>Plumbing &amp; HVAC Blog</h1>
+      <p>Practical guides and homeowner advice from Edmonton's certified plumbing and heating professionals.</p>
+    </div>
+  </div>
 
-    <section class="section">
-      <div class="wrap blog-list">
-        <article class="glass-card">
-          <a class="post-link" href="heat-pump-edmonton-winter.html">
-            <p class="meta">May 2026 · HVAC</p>
-            <h2>Heat pumps in Edmonton winters: what actually works</h2>
-            <p class="excerpt">Balance points, auxiliary heat, and why sizing beats sticker efficiency every time.</p>
-          </a>
-        </article>
-        <article class="glass-card">
-          <a class="post-link" href="water-pressure-sw-edmonton.html">
-            <p class="meta">May 2026 · Plumbing</p>
-            <h2>Low water pressure in SW Edmonton new builds</h2>
-            <p class="excerpt">PRVs, fixture cartridges, and municipal supply quirks we diagnose in the field.</p>
-          </a>
-        </article>
-        <article class="glass-card">
-          <a class="post-link" href="carbon-monoxide-furnace.html">
-            <p class="meta">April 2026 · Safety</p>
-            <h2>Carbon monoxide checks your furnace tech should perform</h2>
-            <p class="excerpt">A transparent checklist aligned with professional practice — and what to ask for.</p>
-          </a>
-        </article>
-        <article class="glass-card">
-          <a class="post-link" href="sump-pump-spring-thaw.html">
-            <p class="meta">April 2026 · Plumbing</p>
-            <h2>Sump pumps and spring thaw on the Southside</h2>
-            <p class="excerpt">Battery backup, discharge routing, and high-water table neighbourhoods.</p>
-          </a>
-        </article>
-        <article class="glass-card">
-          <a class="post-link" href="ac-startup-edmonton.html">
-            <p class="meta">March 2026 · HVAC</p>
-            <h2>AC startup checklist before the first heat wave</h2>
-            <p class="excerpt">Condenser care, filter strategy, and when to call instead of DIY.</p>
-          </a>
-        </article>
-        <article class="glass-card">
-          <a class="post-link" href="tankless-water-heater-edmonton.html">
-            <p class="meta">March 2026 · Plumbing</p>
-            <h2>Tankless water heaters in hard-water Alberta</h2>
-            <p class="excerpt">Descaling cadence, isolation valves, and gas line sizing realities.</p>
-          </a>
-        </article>
-      </div>
-    </section>
-  </main>
+  <!-- Blog Posts -->
+  <section style="padding: 60px 0; background: #F8F9FA;">
+    <div class="container">
+      <div class="blog-grid">
 
-  <footer class="site-footer">
-    <div class="wrap footer-grid">
-      <div>
-        <strong>SW Edmonton Plumbing</strong> + <strong>YEG Heating &amp; Cooling</strong>
-        <p class="muted">swedmontonplumbing.com · yegheatingcooling.com</p>
-      </div>
-      <div>
-        <strong>Explore</strong>
-        <ul class="footer-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../locations.html">Locations</a></li>
-        </ul>
+        <div class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-tag hvac">HVAC</span>
+            <h2><a href="heat-pump-edmonton-winter.html">Heat Pumps in Edmonton Winters: What Actually Works</a></h2>
+            <p>Balance points, auxiliary heat, and why proper sizing beats sticker efficiency every time in Alberta's cold climate.</p>
+          </div>
+          <div class="blog-card-footer">
+            <span>May 2026</span>
+            <a href="heat-pump-edmonton-winter.html" class="read-more">Read Article &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-tag">Plumbing</span>
+            <h2><a href="water-pressure-sw-edmonton.html">Low Water Pressure in SW Edmonton New Builds</a></h2>
+            <p>PRVs, fixture cartridges, and the municipal supply quirks we diagnose most often in the field across southwest communities.</p>
+          </div>
+          <div class="blog-card-footer">
+            <span>May 2026</span>
+            <a href="water-pressure-sw-edmonton.html" class="read-more">Read Article &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-tag safety">Safety</span>
+            <h2><a href="carbon-monoxide-furnace.html">Carbon Monoxide Checks Your Furnace Tech Should Perform</a></h2>
+            <p>A transparent homeowner checklist aligned with professional practice â€” and exactly what to ask your technician for.</p>
+          </div>
+          <div class="blog-card-footer">
+            <span>April 2026</span>
+            <a href="carbon-monoxide-furnace.html" class="read-more">Read Article &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-tag">Plumbing</span>
+            <h2><a href="sump-pump-spring-thaw.html">Sump Pumps and Spring Thaw on the Southside</a></h2>
+            <p>Battery backup sizing, discharge routing, and how to handle high-water-table neighbourhoods common on Edmonton's Southside.</p>
+          </div>
+          <div class="blog-card-footer">
+            <span>April 2026</span>
+            <a href="sump-pump-spring-thaw.html" class="read-more">Read Article &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-tag hvac">HVAC</span>
+            <h2><a href="ac-startup-edmonton.html">AC Startup Checklist Before the First Heat Wave</a></h2>
+            <p>Condenser care, filter strategy, refrigerant checks, and exactly when to call a professional instead of DIY-ing it.</p>
+          </div>
+          <div class="blog-card-footer">
+            <span>March 2026</span>
+            <a href="ac-startup-edmonton.html" class="read-more">Read Article &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card-body">
+            <span class="blog-tag">Plumbing</span>
+            <h2><a href="tankless-water-heater-edmonton.html">Tankless Water Heaters in Hard-Water Alberta</a></h2>
+            <p>Descaling cadence, isolation valve requirements, and gas line sizing realities for on-demand hot water systems.</p>
+          </div>
+          <div class="blog-card-footer">
+            <span>March 2026</span>
+            <a href="tankless-water-heater-edmonton.html" class="read-more">Read Article &rarr;</a>
+          </div>
+        </div>
+
       </div>
     </div>
-    <p class="copyright wrap">© <span id="y"></span> SW Edmonton Plumbing &amp; YEG Heating and Cooling.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="../assets/logo.svg" alt="SW Edmonton Plumbing" style="height:55px;margin-bottom:20px;filter:brightness(0) invert(1);" />
+          <p style="color:#CBD5E1;font-size:0.95rem;">SW Edmonton Plumbing &amp; YEG Heating and Cooling.<br>Based in South West Edmonton, Alberta.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="../index.html#services">Commercial Plumbing</a></li>
+            <li><a href="../index.html#services">Residential Plumbing</a></li>
+            <li><a href="../index.html#services">Heating &amp; Cooling</a></li>
+            <li><a href="../index.html#services">Bathroom Renovations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="../locations.html">Service Areas</a></li>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="../index.html#dispatch">Dispatch Portal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>&#128222; <a href="tel:+17804793285">(780) 479-3285</a></li>
+            <li>&#128205; South West Edmonton, AB</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="y">2026</span> SW Edmonton Plumbing Group. All Rights Reserved.
+      </div>
+    </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+

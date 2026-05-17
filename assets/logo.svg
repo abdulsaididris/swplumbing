@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="300" height="70">
+  <!-- Shield background -->
+  <rect x="0" y="5" width="60" height="60" rx="8" ry="8" fill="#0A2540"/>
+  <!-- SW text inside shield -->
+  <text x="30" y="44" font-family="Arial, sans-serif" font-size="28" font-weight="900" fill="#FFFFFF" text-anchor="middle">SW</text>
+  <!-- Wrench accent dot -->
+  <circle cx="52" cy="14" r="5" fill="#FF6B00"/>
+  <!-- Company name -->
+  <text x="72" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#0A2540">SW Edmonton</text>
+  <text x="72" y="48" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#0A2540">Plumbing</text>
+  <text x="72" y="63" font-family="Arial, sans-serif" font-size="9.5" font-weight="500" fill="#FF6B00">YEG Heating &amp; Cooling</text>
+</svg>
